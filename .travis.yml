@@ -10,8 +10,7 @@ before_install:
  - wget http://sourceforge.net/projects/gputils/files/gputils/1.3.0/gputils-1.3.0.tar.gz/download -O gputils-1.3.0.tar.gz
  - tar -xvzf gputils-1.3.0.tar.gz
  - cd gputils-1.3.0
- - ./configure
- - make
- - sudo make install
+ - ./configure && make && sudo make install
+ - cd ..
 
 script: python test.py

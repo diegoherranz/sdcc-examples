@@ -17,5 +17,8 @@ The architectures included are:
 
 - `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16.
 
+### Tests
+Every example on this repository is checked using [Travis-CI](https://travis-ci.org). [SDCC](http://sdcc.sourceforge.net/) and [gputils](http://gputils.sourceforge.net/) are downloaded and installed on the Travis machine and it is tested that every example compiles without errors. 
+
 ### Collaboration
 Any kind of collaboration like more examples, examples for more architectures, corrections, comments, etc. are very welcome. Feel free to open an issue or fork and pull request.
