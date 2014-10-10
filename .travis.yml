@@ -1,0 +1,11 @@
+language: c
+
+before_install:
+ - wget http://downloads.sourceforge.net/project/sdcc/sdcc-linux-x86/3.4.0/sdcc-3.4.0-i386-unknown-linux2.5.tar.bz2
+ - tar -xvjf sdcc-3.4.0-i386-unknown-linux2.5.tar.bz2
+ - cd sdcc-3.4.0/
+ - sudo cp -r * /usr/local
+ - sudo apt-get -y install libc6:i386
+ - cd ..
+
+script: python test.py
