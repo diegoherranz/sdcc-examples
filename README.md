@@ -15,6 +15,7 @@ There are README files on each example with explanations of the code and indicat
 
 The architectures included are:
 
+- `pic14/`: PIC16F microcontrollers which have a 14-bit instruction bus, hence pic14.
 - `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16.
 
 ### Tests
