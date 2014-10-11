@@ -1,6 +1,7 @@
 language: c
 
-before_install:
+install:
+ - cd
  - wget http://downloads.sourceforge.net/project/sdcc/sdcc-linux-x86/3.4.0/sdcc-3.4.0-i386-unknown-linux2.5.tar.bz2
  - tar -xvjf sdcc-3.4.0-i386-unknown-linux2.5.tar.bz2
  - cd sdcc-3.4.0/
@@ -11,6 +12,6 @@ before_install:
  - tar -xvzf gputils-1.3.0.tar.gz
  - cd gputils-1.3.0
  - ./configure && make && sudo make install
- - cd ..
+ - cd $TRAVIS_BUILD_DIR
 
 script: python test.py
