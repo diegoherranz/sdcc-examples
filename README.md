@@ -15,8 +15,8 @@ There are README files on each example with explanations of the code and indicat
 
 The architectures included are:
 
-- `pic14/`: PIC16F microcontrollers which have a 14-bit instruction bus, hence pic14.
-- `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16.
+- `pic14/`: PIC16F microcontrollers which have a 14-bit instruction bus, hence pic14. Examples for PIC16F886, but small modifications needed to use other PICs.
+- `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16. Examples for PIC18F2550, but small modifications needed to use other PICs.
 
 ### Tests
 Every example on this repository is checked using [Travis-CI](https://travis-ci.org). [SDCC](http://sdcc.sourceforge.net/) and [gputils](http://gputils.sourceforge.net/) are downloaded and installed on the Travis machine and it is tested that every example compiles without errors. 
