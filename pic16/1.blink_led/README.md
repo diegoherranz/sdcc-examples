@@ -8,5 +8,5 @@ Blink an LED at a 1 Hz frequency.
  - An LED must be connected to pin RC0. LED anode must be connected to the pin through a ~1k ohm resistor and the LED cathode must be connected to GND.
 
 ### Notes
- - `#pragma config FOSC = INTOSCIO_EC` selects internal oscillator as primary oscillator. Default frequency is 1 MHz, which will be the frequency of this example.
+ - `#pragma config FOSC = INTOSCIO_EC` selects internal oscillator as primary oscillator. Default frequency is 1 MHz, which will be the frequency of this example. The rest of fuses are left by default.
  - `#include <delay.h>` provides access to delay functions. [delay.h](http://sourceforge.net/p/sdcc/code/HEAD/tree/trunk/sdcc/device/include/pic16/delay.h) in SDCC repository.
