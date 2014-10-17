@@ -1,3 +1,5 @@
+// Copyright (C) 2014 Diego Herranz
+
 #define NO_BIT_DEFINES
 #include <pic14regs.h>
 #include <stdint.h> 

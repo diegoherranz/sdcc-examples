@@ -1,5 +1,7 @@
 #!/usr/bin/env python 
 
+# Copyright (C) 2014 Diego Herranz
+
 import os
 import subprocess
 

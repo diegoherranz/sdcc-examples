@@ -1,3 +1,5 @@
+// Copyright (C) 2014 Diego Herranz
+
 #include <pic18fregs.h>
 #include <delay.h>
 #include <stdint.h>
