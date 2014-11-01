@@ -10,12 +10,14 @@ install:
  - sudo apt-get -y install libc6:i386
 
  # Download, compile and install gputils
- - cd ..
+ - cd
  - wget https://downloads.sourceforge.net/project/gputils/gputils/1.4.0/gputils-1.4.0-1.tar.gz
  - tar -xvzf gputils-1.4.0-1.tar.gz
  - cd gputils-1.4.0-1
  - sudo apt-get -y install bison flex
  - ./configure && make && sudo make install
+
+ # Go to code folder
  - cd $TRAVIS_BUILD_DIR
 
 # Test is done using test.py
