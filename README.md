@@ -15,11 +15,11 @@ There are README files on each example with explanations of the code and indicat
 
 The architectures included are:
 
-- `pic14/`: PIC16F microcontrollers which have a 14-bit instruction bus, hence pic14. Examples for PIC16F886, but small modifications needed to use other PICs. As of this writing, the pic14 port is unstable and can even be considered as broken. 
-- `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16. Examples for PIC18F2550, but small modifications needed to use other PICs. As of this writing, the pic16 is unstable but it can be used carefully.
+- `pic14/`: PIC16F microcontrollers which have a 14-bit instruction bus, hence pic14. Examples for PIC16F886, but small modifications needed to use other PICs. As of this writing, the pic14 port of SDCC is unstable and can even be considered as broken. 
+- `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16. Examples for PIC18F2550, but small modifications needed to use other PICs. As of this writing, the pic16 port of SDCC is unstable but it can be used carefully.
 
 ### Requirements
-To compile these examples [SDCC](http://sdcc.sourceforge.net/) and [gputils](http://gputils.sourceforge.net/) are required. There are packages of both on repositories of distributions like Debian and Ubuntu. Despite being an easy way to install them, the packages are quite updated and installing the latest stable versions is strongly advised.
+To compile these examples [SDCC](http://sdcc.sourceforge.net/) is required. [gputils](http://gputils.sourceforge.net/) is also required for PIC ports. There are packages of both on repositories of distributions like Debian and Ubuntu. Despite being an easy way to install them, the packages are quite updated and installing the latest stable versions is strongly advised.
 
 #### SDCC installation
 SDCC is distributed pre-compiled so it's easy to install.
@@ -31,7 +31,7 @@ SDCC is distributed pre-compiled so it's easy to install.
   - After installation, test that `sdcc -v` works and returns the version number you expect.
   - If not working, showing a message similar to `sdcc: Command not found`, it usally means that 32-bit C libraries are missing on a 64-bit system. On Debian/Ubuntu, `sudo apt-get install libc6:i386`. Similar for other distros.
 
-#### gputils installation
+#### gputils installation (only for PIC ports)
 gputils needs to be compiled before installing (except for Windows for which there is an exe installer).
 
   - Go to [gputils files page](http://sourceforge.net/projects/gputils/files/)
