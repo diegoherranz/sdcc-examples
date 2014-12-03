@@ -15,6 +15,9 @@
 // Watchdog timer OFF
 #pragma config WDT = OFF
 
+// Single-Supply ICSP OFF
+#pragma config LVP = OFF
+
 // FUSES END
 
 #define LED_LAT LATCbits.LATC0

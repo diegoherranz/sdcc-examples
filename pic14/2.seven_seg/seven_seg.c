@@ -4,10 +4,11 @@
 #include <pic14regs.h>
 #include <stdint.h> 
 
-// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
-// and disable watchdog
+// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN),
+// disable watchdog,
+// and disable low voltage programming.
 // The rest of fuses are left as default.
-__code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT && _WDTE_OFF;
+__code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT && _WDTE_OFF && _LVP_OFF;
 
 
 // Uncalibrated delay, just waits a number of for-loop iterations
