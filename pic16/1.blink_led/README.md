@@ -4,7 +4,7 @@ Blink LED
 Blink an LED at a 1 Hz frequency.
 
 ### Hardware for this example
- - Reset input pin must be connected to VDD.
+ - MCLR input pin must be connected to VDD.
  - An LED must be connected to pin RC0. LED anode must be connected to the pin through a ~1k ohm resistor and the LED cathode must be connected to GND.
 
 ### Notes
