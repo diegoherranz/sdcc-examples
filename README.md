@@ -19,7 +19,7 @@ The architectures included are:
 - `pic16/`: PIC18F microcontrollers which have a 16-bit instruction bus, hence pic16. Examples for PIC18F2550, but small modifications needed to use other PICs. As of this writing, the pic16 port of SDCC is unstable but it can be used carefully.
 
 ### Requirements
-To compile these examples [SDCC](http://sdcc.sourceforge.net/) is required. [gputils](http://gputils.sourceforge.net/) is also required for PIC ports. There are packages of both on repositories of distributions like Debian and Ubuntu. Despite being an easy way to install them, the packages are quite updated and installing the latest stable versions is strongly advised.
+To compile these examples [SDCC](http://sdcc.sourceforge.net/) is required. [gputils](http://gputils.sourceforge.net/) is also required for PIC ports. There are packages of both on repositories of distributions like Debian and Ubuntu. Despite being an easy way to install them, the packages are quite outdated and installing the latest stable versions is strongly advised.
 
 #### SDCC installation
 SDCC is distributed pre-compiled so it's easy to install.
