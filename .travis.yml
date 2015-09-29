@@ -7,6 +7,7 @@ install:
  - tar -xvjf sdcc-3.5.0-i386-unknown-linux2.5.tar.bz2
  - cd sdcc-3.5.0/
  - sudo cp -r * /usr/local
+ - sudo apt-get update
  - sudo apt-get -y install libc6:i386
 
  # Download, compile and install gputils
@@ -14,6 +15,7 @@ install:
  - wget https://downloads.sourceforge.net/project/gputils/gputils/1.4.0/gputils-1.4.0-1.tar.gz
  - tar -xvzf gputils-1.4.0-1.tar.gz
  - cd gputils-1.4.0-1
+ - sudo apt-get update
  - sudo apt-get -y install bison flex
  - ./configure && make && sudo make install
 
