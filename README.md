@@ -1,7 +1,7 @@
 SDCC examples
 =============
 
-[![Build Status](https://travis-ci.org/diegoherranz/sdcc-examples.svg)](https://travis-ci.org/diegoherranz/sdcc-examples)
+[![Build Status](https://travis-ci.org/diegoherranz/sdcc-examples.svg?branch=master)](https://travis-ci.org/diegoherranz/sdcc-examples)
 
 This repository includes code examples to use with [SDCC](http://sdcc.sourceforge.net/). The examples can help beginners who usually find problems like which headers to include, which parameters to use when compiling and so on.
 
