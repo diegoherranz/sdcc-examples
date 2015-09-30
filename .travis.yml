@@ -1,5 +1,9 @@
 language: c
 
+env:
+ global:
+  - TERM=dumb
+
 install:
  # Install packages required for gputils and/or SDCC compilation
  - sudo apt-get update
