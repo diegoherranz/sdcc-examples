@@ -7,11 +7,11 @@ install:
  - tar -xvjf sdcc-3.5.0-i386-unknown-linux2.5.tar.bz2
  - cd sdcc-3.5.0/
  - sudo cp -r * /usr/local
- - sudo add-apt-repository ppa:ubuntu-toolchain-r/test 
+ - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test 
  - sudo apt-get update
  - sudo apt-get -y install libc6:i386
- - sudo apt-get upgrade
- - sudo apt-get dist-upgrade
+ - sudo apt-get -y upgrade
+ - sudo apt-get -y dist-upgrade
 
  # Download, compile and install gputils
  - cd
