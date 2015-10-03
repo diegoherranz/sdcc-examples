@@ -1,25 +1,26 @@
 language: c
 
-install:
- # Download and Install SDCC
- - cd
- - wget http://downloads.sourceforge.net/project/sdcc/sdcc-linux-x86/3.4.0/sdcc-3.4.0-i386-unknown-linux2.5.tar.bz2
- - tar -xvjf sdcc-3.4.0-i386-unknown-linux2.5.tar.bz2
- - cd sdcc-3.4.0/
- - sudo cp -r * /usr/local
+before_install:
+ # Install packages required for gputils and/or SDCC compilation
  - sudo apt-get update
- - sudo apt-get -y install libc6:i386
+ - sudo apt-get -y install bison flex libboost-dev
 
+install:
  # Download, compile and install gputils
  - cd
- - wget https://downloads.sourceforge.net/project/gputils/gputils/1.4.0/gputils-1.4.0-1.tar.gz
- - tar -xvzf gputils-1.4.0-1.tar.gz
+ - wget --no-verbose https://downloads.sourceforge.net/project/gputils/gputils/1.4.0/gputils-1.4.0-1.tar.gz
+ - tar -xzf gputils-1.4.0-1.tar.gz
  - cd gputils-1.4.0-1
- - sudo apt-get update
- - sudo apt-get -y install bison flex
- - ./configure && make && sudo make install
+ - ./configure && make -s && sudo make -s install
 
- # Go to code folder
+ # Download, compile and install SDCC
+ - cd
+ - wget --no-verbose http://downloads.sourceforge.net/project/sdcc/sdcc/3.5.0/sdcc-src-3.5.0.tar.bz2
+ - tar -xjf sdcc-src-3.5.0.tar.bz2
+ - cd sdcc-3.5.0/
+ - ./configure && make -s && sudo make -s install
+
+ # Go back to code folder
  - cd $TRAVIS_BUILD_DIR
 
 # Test is done using test.py
