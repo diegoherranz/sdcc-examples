@@ -26,7 +26,7 @@ There are packages of both on repositories of distributions like Debian and Ubun
 
 #### Installing dependencies
 Before intalling gputils and SDCC, these dependencies are needed:
-`$ sudo apt-get install bison flex libboost-dev` (probably similar packages for other distros)
+`$ sudo apt-get install bison flex g++ libboost-dev` (probably similar packages for other distros)
 
 #### gputils installation
 gputils needs to be compiled before installing. Needs to be installed before SDCC.
