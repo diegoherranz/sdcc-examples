@@ -3,7 +3,7 @@ language: c
 before_install:
  # Install packages required for gputils and/or SDCC compilation
  - sudo apt-get update
- - sudo apt-get -y install bison flex libboost-dev
+ - sudo apt-get -y install bison flex g++ libboost-dev
 
 install:
  # Download, compile and install gputils
