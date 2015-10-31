@@ -1,5 +1,10 @@
 language: c
 
+env:
+  - SDCC_VERSION=3.3.0
+  - SDCC_VERSION=3.4.0
+  - SDCC_VERSION=3.5.0
+
 before_install:
  # Install packages required for gputils and/or SDCC compilation
  - sudo apt-get update
@@ -15,9 +20,9 @@ install:
 
  # Download, compile and install SDCC
  - cd
- - wget --no-verbose http://downloads.sourceforge.net/project/sdcc/sdcc/3.5.0/sdcc-src-3.5.0.tar.bz2
- - tar -xjf sdcc-src-3.5.0.tar.bz2
- - cd sdcc-3.5.0/
+ - wget --no-verbose http://downloads.sourceforge.net/project/sdcc/sdcc/${SDCC_VERSION}/sdcc-src-${SDCC_VERSION}.tar.bz2
+ - tar -xjf sdcc-src-${SDCC_VERSION}.tar.bz2
+ - cd sdcc-${SDCC_VERSION}/
  - ./configure && make -s && sudo make -s install
 
  # Go back to code folder
