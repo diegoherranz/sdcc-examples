@@ -22,7 +22,7 @@ The architectures included are:
 To compile these examples [SDCC](http://sdcc.sourceforge.net/) is required. [gputils](http://gputils.sourceforge.net/) is also required for PIC ports.
 
 ### Installation on Linux
-There are packages of both on repositories of distributions like Debian and Ubuntu. Despite being an easy way to install them, the packages are quite outdated and installing the latest stable versions is strongly advised. These instructions are for Ubuntu 12.04 LTS and 14.04 LTS but the process should be very similar for other distros, probably just changing the dependencies install. 
+There are packages of both on repositories of distributions like Debian and Ubuntu. Despite being an easy way to install them, the packages are quite outdated and installing the latest stable versions is strongly recommended. These instructions are for Ubuntu 12.04 LTS and 14.04 LTS but the process should be very similar for other distros, hopefully just changing the dependencies install. 
 
 #### Installing dependencies
 Before intalling gputils and SDCC, these dependencies are needed:
@@ -37,6 +37,8 @@ gputils needs to be compiled before installing. Needs to be installed before SDC
   - If everything went fine, check that `gpasm -v` works and returns the version number you expect.
 
 #### SDCC installation
+
+Up to SDCC 3.4.0, the precompiled version of SDCC worked fine on the Ubuntu 12.04 LTS and 14.04 LTS versions, but 3.5.0 (the latest release as of this writing) needs to be compiled because the precompiled files depend on GLIBCXX_3.4.20 which is not available on those Ubuntu versions.
 
   - Go to [SCCC source files page](http://sourceforge.net/projects/sdcc/files/sdcc/).
   - Download the latest stable version and extract it. Be careful not to download Release Candidate (RC) files.
@@ -53,7 +55,6 @@ gputils needs to be compiled before installing. Needs to be installed before SDC
   - If everything went fine, check that `gpasm -v` works and returns the version number you expect.
 
 #### SDCC installation
-Up to SDCC 3.4.0, the precompiled version of SDCC worked fine on the Ubuntu 12.04 LTS and 14.04 LTS versions, but 3.5.0 (the latest release as of this writing) needs to be compiled because the precompiled files depend on GLIBCXX_3.4.20 which is not available on that Ubuntu versions.
 
   - Go to SCCC source files page: [32-bit](http://sourceforge.net/projects/sdcc/files/sdcc-win32/) or [64-bit](http://sourceforge.net/projects/sdcc/files/sdcc-win64/).
   - Download the latest stable version. Be careful not to download Release Candidate (RC) files.
