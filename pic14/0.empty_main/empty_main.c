@@ -2,9 +2,6 @@
 
 #include <pic14regs.h>
 
-
-void main(void){
-
-
-
+void main(void)
+{
 }

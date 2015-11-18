@@ -21,10 +21,9 @@
 
 // FUSES END
 
-
-uint8_t number_to_7seg(uint8_t number){
-
-	switch(number){
+uint8_t number_to_7seg(uint8_t number)
+{
+	switch (number) {
 		case 0:
 			return 0x3F;
 		case 1:
@@ -48,22 +47,20 @@ uint8_t number_to_7seg(uint8_t number){
 		default:
 			return 0;
 	}
-
 }
 
 
-void main(void){
-
+void main(void)
+{
 	uint8_t i;
 
 	TRISB = 0; // Pins as output
 	LATB = 0; // LEDs off
 	
-	while(1){
-		for(i=0; i<10; i++){
+	while (1) {
+		for (i = 0; i < 10; i++) {
 			LATB = number_to_7seg(i);
 			delay1ktcy(250); //1s @ 1MHz	
 		}		
 	}
-
 }

@@ -10,19 +10,19 @@
 // The rest of fuses are left as default.
 __code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT && _WDTE_OFF && _LVP_OFF;
 
-
 // Uncalibrated delay, just waits a number of for-loop iterations
-void delay(uint16_t iterations){
-		uint16_t i;
-		for (i = 0; i < iterations; i++) {
-			// Prevent this loop from being optimized away.
-			__asm nop __endasm;
-		}
+void delay(uint16_t iterations)
+{
+	uint16_t i;
+	for (i = 0; i < iterations; i++) {
+		// Prevent this loop from being optimized away.
+		__asm nop __endasm;
+	}
 }
 
-uint8_t number_to_7seg(uint8_t number){
-
-	switch(number){
+uint8_t number_to_7seg(uint8_t number)
+{
+	switch (number) {
 		case 0:
 			return 0x3F;
 		case 1:
@@ -46,21 +46,19 @@ uint8_t number_to_7seg(uint8_t number){
 		default:
 			return 0;
 	}
-
 }
 
-void main(void){
-
+void main(void)
+{
 	uint8_t i;
 
 	TRISB = 0; // Pins as output
 	PORTB = 0; // LEDs off
 	
-	while(1){
-		for(i=0; i<10; i++){
+	while (1) {
+		for (i = 0; i < 10; i++) {
 			PORTB = number_to_7seg(i);
 			delay(60000); //~1s @ 4MHz	
 		}		
 	}
-
 }

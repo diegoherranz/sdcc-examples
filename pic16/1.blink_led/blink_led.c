@@ -23,14 +23,13 @@
 #define LED_LAT LATCbits.LATC0
 #define LED_TRIS TRISCbits.TRISC0
 
-void main(void){
-
+void main(void)
+{
 	LED_TRIS = 0; // Pin as output
 	LED_LAT = 0; // LED off
 	
-	while(1){
+	while (1) {
 		LED_LAT = !LED_LAT; // Toggle LED
 		delay1ktcy(125); //500ms @ 1MHz
 	}
-
 }
