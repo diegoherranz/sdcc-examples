@@ -1,9 +1,12 @@
 language: c
 
 env:
-  - SDCC_VERSION=3.3.0
-  - SDCC_VERSION=3.4.0
-  - SDCC_VERSION=3.5.0
+  - SDCC_VERSION=3.3.0 GPUTILS_VERSION=1.4.0
+  - SDCC_VERSION=3.3.0 GPUTILS_VERSION=1.4.2
+  - SDCC_VERSION=3.4.0 GPUTILS_VERSION=1.4.0
+  - SDCC_VERSION=3.4.0 GPUTILS_VERSION=1.4.2
+  - SDCC_VERSION=3.5.0 GPUTILS_VERSION=1.4.0
+  - SDCC_VERSION=3.5.0 GPUTILS_VERSION=1.4.2
 
 before_install:
  # Install packages required for gputils and/or SDCC compilation
@@ -13,9 +16,9 @@ before_install:
 install:
  # Download, compile and install gputils
  - cd
- - wget --no-verbose https://downloads.sourceforge.net/project/gputils/gputils/1.4.0/gputils-1.4.0-1.tar.gz
- - tar -xzf gputils-1.4.0-1.tar.gz
- - cd gputils-1.4.0-1
+ - wget --no-verbose https://downloads.sourceforge.net/project/gputils/gputils/${GPUTILS_VERSION}/gputils-${GPUTILS_VERSION}-1.tar.gz
+ - tar -xzf gputils-${GPUTILS_VERSION}-1.tar.gz
+ - cd gputils-${GPUTILS_VERSION}-1
  - ./configure && make -s && sudo make -s install
 
  # Download, compile and install SDCC
