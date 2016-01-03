@@ -18,7 +18,7 @@ install:
  - cd
  - wget --no-verbose https://downloads.sourceforge.net/project/gputils/gputils/${GPUTILS_VERSION}/gputils-${GPUTILS_VERSION}-1.tar.gz
  - tar -xzf gputils-${GPUTILS_VERSION}-1.tar.gz
- - cd gputils-${GPUTILS_VERSION}-1
+ - cd gputils-${GPUTILS_VERSION}*
  - ./configure && make -s && sudo make -s install
 
  # Download, compile and install SDCC
