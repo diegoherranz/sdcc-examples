@@ -8,7 +8,7 @@
 // disable watchdog,
 // and disable low voltage programming.
 // The rest of fuses are left as default.
-__code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT && _WDTE_OFF && _LVP_OFF;
+__code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT & _WDTE_OFF & _LVP_OFF;
 
 // Uncalibrated delay, just waits a number of for-loop iterations
 void delay(uint16_t iterations)

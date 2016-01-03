@@ -8,7 +8,7 @@
 // disable watchdog,
 // and disable low voltage programming.
 // The rest of fuses are left as default.
-__code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT && _WDTE_OFF && _LVP_OFF;
+__code uint16_t __at (_CONFIG1) __configword = _INTRC_OSC_NOCLKOUT & _WDTE_OFF & _LVP_OFF;
 
 #define LED_PORT PORTCbits.RC0
 #define LED_TRIS TRISCbits.TRISC0
