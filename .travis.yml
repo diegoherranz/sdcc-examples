@@ -7,6 +7,13 @@ env:
   - SDCC_VERSION=3.4.0 GPUTILS_VERSION=1.4.2
   - SDCC_VERSION=3.5.0 GPUTILS_VERSION=1.4.0
   - SDCC_VERSION=3.5.0 GPUTILS_VERSION=1.4.2
+  - SDCC_VERSION=3.6.0 SDCC_RC=-rc1 GPUTILS_VERSION=1.4.0
+  - SDCC_VERSION=3.6.0 SDCC_RC=-rc1 GPUTILS_VERSION=1.4.2
+
+matrix:
+  allow_failures:
+  - env: SDCC_VERSION=3.6.0 SDCC_RC=-rc1 GPUTILS_VERSION=1.4.0
+  - env: SDCC_VERSION=3.6.0 SDCC_RC=-rc1 GPUTILS_VERSION=1.4.2
 
 before_install:
  # Install packages required for gputils and/or SDCC compilation
@@ -23,7 +30,7 @@ install:
 
  # Download, compile and install SDCC
  - cd
- - wget --no-verbose http://downloads.sourceforge.net/project/sdcc/sdcc/${SDCC_VERSION}/sdcc-src-${SDCC_VERSION}.tar.bz2
+ - wget --no-verbose http://downloads.sourceforge.net/project/sdcc/sdcc/${SDCC_VERSION}/sdcc-src-${SDCC_VERSION}${SDCC_RC}.tar.bz2
  - tar -xjf sdcc-src-${SDCC_VERSION}.tar.bz2
  - cd sdcc-${SDCC_VERSION}/
  - ./configure && make -s && sudo make -s install
