@@ -9,4 +9,4 @@ Blink an LED at a 1 Hz frequency.
 
 ### Notes
  - `#pragma config FOSC = INTOSCIO_EC` selects internal oscillator as primary oscillator. Default frequency is 1 MHz, which will be the frequency of this example.
- - `#include <delay.h>` provides access to delay functions. [delay.h](http://sourceforge.net/p/sdcc/code/HEAD/tree/trunk/sdcc/device/include/pic16/delay.h) in SDCC repository.
+ - `#include <delay.h>` provides access to delay functions (see[delay.h](http://sourceforge.net/p/sdcc/code/HEAD/tree/trunk/sdcc/device/include/pic16/delay.h) in SDCC repository).

@@ -11,4 +11,4 @@ Since it is an empty main, there is no point in testing it on real hardware.
 
  - `#pragma config XINST=OFF` disables extended instruction set of the PIC (fuse) because SDCC generates code incompatible with it.
 
- - `--use-non-free` is passed to SDCC because Microchip header files are not GPL-compatible since they can be used only for chips produced by Microchip.
+ - `--use-non-free` needs to be used because Microchip header files are not GPL-compatible since they can be used only for chips produced by Microchip.
